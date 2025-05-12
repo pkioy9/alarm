@@ -19,12 +19,11 @@ def start_alarm():
     def wait_and_ring():
         time.sleep(seconds)
         label.config(text="⏰ Время вышло!")
-        playsound('alarm.wav')  # Убедитесь, что файл alarm.wav есть в той же папке
+        playsound('alarm.wav') 
         button.config(state='normal')
 
     threading.Thread(target=wait_and_ring, daemon=True).start()
 
-# Интерфейс
 root = tk.Tk()
 root.title("Будильник")
 
